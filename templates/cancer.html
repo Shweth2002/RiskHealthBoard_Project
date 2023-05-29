@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" type="text/css" href="C:\Desktop1\Shwetha V\RiskHealthBoard_Project\static\style.css">
+<title>Breast Cancer Prediction</title>
+</head>
+<style>
+
+nav {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(60, 63, 63);
+}
+
+.navbar-brand {
+    font-size: 22px;
+    color:aliceblue; 
+}
+.nav-link{
+    font-size: 18px;
+    color: aliceblue;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: white;
+}
+
+.right {
+  right: 0;
+  background-color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+    button
+{
+	border-style:none;
+}
+
+h1, h2, h3, h4, h5{
+    text-align: center;
+
+}
+
+form {
+	margin-top: 3%;
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
+
+form fieldset{
+	padding: 30px;
+	border-width: 20px;
+	border-style: groove;
+    border-color: #5a5a5a;
+	background-color: #fff;
+}
+
+fieldset h1 {
+	color: #5a5a5a;
+	padding-bottom: 20px;
+	margin-left: 35px;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 28px;
+	text-align: center;
+}
+
+fieldset label {
+	margin-left: 15px;
+	margin-right: 20px;
+	padding: 23px;
+	font-size: 20px;
+	display: inline-block;
+    width  : 150px;
+}
+fieldset input{
+	padding:8px;
+	color: #938c8c
+}
+fieldset input:focus{
+	color: #000;
+}
+fieldset button
+{
+	margin-left: 60px;
+	color: #fff;
+	background-color: #5a5a5a;
+	border-radius: 3px;
+	padding: 13px 39px;
+	text-align: center;
+	letter-spacing: 0.9px;
+	text-decoration: none;
+	margin-right: 15px;
+	line-height: 26px;
+	font-size: 16px;
+	box-shadow: 0px 1px 3px 0px #5a5a5a;
+	right: 0px;
+	margin-top: 15px;
+}
+
+
+.submit{
+	margin-left: 60px;
+	color: #fff;
+	background-color: #5a5a5a;
+	border-radius: 3px;
+	padding: 13px 39px;
+	text-align: center;
+	letter-spacing: 0.9px;
+	text-decoration: none;
+	margin-right: 10px;
+	line-height: 26px;
+	font-size: 16px;
+	box-shadow: 0px 1px 3px 0px #5a5a5a;
+	right: 100px;
+	margin-top: 15px;
+}
+
+#link_to_edit{
+    padding-left: 45px;
+}
+
+.fieldset{
+	margin-top: 3%;
+	margin-left: 0%;
+	margin-right: 0%;
+	padding: 30px;
+	border-width: 25px;
+	border-style: ridge;
+	border-color: #257a7a;
+	box-shadow: 6px 13px 13px 0px black;
+	background-color: #ebfffa;
+}
+
+</style>
+<body>
+
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home"><b>RISK HEALTH BOARD</b><br><div style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:small  ;"><i>Be At a Ease Without a Disease</i></div></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div style="text-align: right;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">Get Started</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/disindex">Disease Index</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/cancer">Breast Cancer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/diabetes">Diabetes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/kidney">Kidney Disease</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/liver">Liver Disease</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">|</a>
+          </li>
+              <li class="nav-item">
+              <a class="nav-link" href="/">Logout</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </nav>
+    </header><br/><br/><br/>
+    <div class="split left"><br><br/><br>
+    <h1>Breast Cancer Prediction</h1>
+    <h5>Please enter the patient details</h5>
+        <p style="text-align:center">(Enter values from 0-10)</p>
+    <form action="{{ url_for('predict')}}" method="post" class="form-inline">
+            <fieldset>
+            <div class="tabcontent" id="new">
+                 <div class="form-group">
+                    <label for="clump_thickness">1.Clump Thickness </label>
+                    <input type="number" class="form-control" name="clump_thickness" required="required" placeholder="Clump Thickness">
+                 </div>
+                  <div class="form-group">
+                    <label for="uniform_cell_size">2.Uniform Cell Size</label>
+                    <input type="number" class="form-control" name="uniform_cell_size" required="required" placeholder="Uniform Cell Size">
+                  </div>
+                  <div class="form-group">
+                    <label for="uniform_cell_shape">3.Uniform Cell Shape</label>
+                    <input type="number" class="form-control" name="uniform_cell_shape" required="required" placeholder="Uniform Cell Shape" />
+                  </div>
+                  <div class="form-group">
+                    <label for="marginal_adhesion">4.Marginal Adhesion</label>
+                    <input type="number" class="form-control" name="marginal_adhesion" required="required" placeholder="Marginal Adhesion"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="single_epithelial_size">5.Single Epithelial Cell Size</label>
+                    <input type="number" class="form-control" name="single_epithelial_size" required="required" placeholder="Single Epithelial Cell Size"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="bare_nuclei">6.Bare Nuclei</label>
+                    <input type="number" class="form-control" name="bare_nuclei" required="required" placeholder="Bare Nuclei"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="bland_chromatin">7.Bland Chromatin</label>
+                    <input type="number" class="form-control" name="bland_chromatin" required="required" placeholder="Bland Chromatin"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="normal_nucleoli">8.Normal Nucleoli</label>
+                    <input type="number" class="form-control" name="normal_nucleoli" required="required" placeholder="Normal Nucleoli"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="mitoses">9.Mitoses</label>
+                    <input type="number" class="form-control" name="mitoses" required="required" placeholder="Mitoses"/>
+                  </div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
+                </div>
+            </fieldset>
+          </form>
+          </div>
+          
+
+<div class="split right">
+  <br><br><br>
+  <div style="background-color: #e0dcdc;margin-left: 4%;margin-right: 4%; padding-right: 4%;">
+    <h1>About Breast Cancer</h1>
+    <ul style="text-align: justify;">
+      <li>Breast cancer is a disease that has emerged as the second leading cause of cancer deaths in women worldwide.</li>
+      <li>Breast cancer is a type of cancer that develops from breast tissue and is often associated by a lump in the breast, change in breast shape, development of red and patchy skin, or fluid emanating from the nipple. 
+        The causes for breast cancer have not been fully understood till date.</li>
+        <li> There are some genetic factors, and some environmental factors associated with its development.
+          Breast cancer is preliminarily detected by a mammogram exam and confirmed by a biopsy.</li><br>
+    </ul>
+
+      <div style="background-color: #e0dcdc;margin-left: 4%;margin-right: 4%;">
+        <h5 style="text-align: justify;">We have 9 cytological features/attributes which can help us detect whether the tumor is benign or malignant.</h5>
+        <ul style="list-style-type: decimal;">
+          <li><b>Clump Thickness: </b>This is used to assess if cells are mono-layered or multi-layered.
+             Benign cells tend to be grouped in mono-layers, while cancerous cells are often grouped in multi-layer.</li>
+          <li><b>Uniformity of Cell Size:</b>It is used to evaluate the consistency in the size of cells in the sample. Cancer cells tend to vary in size.
+             That is why this parameter is very valuable in determining whether the cells are cancerous or not.</li>
+          <li><b>Uniformity of Cell Shape:</b>It is used to estimate the equality of cell shapes and identifies marginal variances because cancer cells tend to vary in shape.</li>
+          <li><b>Marginal Adhesion:</b>Normal cells tend to stick together. Cancer cells tend to loose this ability. So loss of adhesion is a sign of malignancy.</li>
+          <li><b>Single Epithelial Cell Size:</b>It is related to the uniformity. Epithelial cells that are significantly enlarged may be a malignant cell.</li>
+          <li><b>Bare Nuclei:</b>This is a term used for nuclei that is not surrounded by cytoplasm. Those are typically seen in benign tumor.</li>
+          <li><b>Bland Chromatin:</b>Describes a uniform texture of the nucleus seen in benign cell. In cancer cell, the chromatin tends to be coarser.</li>
+          <li><b>Normal Nucleoli:</b>Nucleoli are small structures seen in the nucleus. In normal cell the nucleolus is usually very small if visible at all.
+             In cancer cell the nucleoli become much more prominent, and sometimes there are more of them.</li>
+             <li><b>Mitoses:</b>It is an estimate of the number of mitosis that has taken place. Larger the value, greater is the chance of malignancy.</li><br>
+        </ul>
+        </div>
+        </div>
+      <div style="text-align: center; margin-top: 20px">
+        <img style="max-width: 500px" src="static/img/cancer.png" /><br/><br/>
+      </div>      
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

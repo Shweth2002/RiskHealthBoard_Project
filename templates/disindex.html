@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" type="text/css" href="C:\Desktop1\Shwetha V\RiskHealthBoard_Project\static\style.css">
+  
+	<title>Disease Index</title>
+</head>
+<style>
+     nav {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(60, 63, 63);
+}
+
+.navbar-brand {
+    font-size: 22px;
+    color:aliceblue; 
+}
+.nav-link{
+    font-size: 18px;
+    color: aliceblue;
+}
+	 #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 75px;
+      padding: 16px;
+      bottom: 8px;
+    }
+
+    .img_holder img{
+        max-width: 100%; max-height: 100%;
+    }
+
+    .btn-file {
+    position: relative;
+    overflow: hidden;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+</style>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/home"><b>RISK HEALTH BOARD</b><br><div style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:small  ;"><i>Be At a Ease Without a Disease</i></div></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div style="text-align: right;">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Get Started</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/disindex">Disease Index</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/cancer">Breast Cancer</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/diabetes">Diabetes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/kidney">Kidney Disease</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/liver">Liver Disease</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">|</a>
+                </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/">Logout</a>
+                </li>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </nav>
+    </header>
+    <br/>
+    <br/>
+	<div class="container">
+        <h1 style="text-align:center;">RiskHealthBoard - Disease Index</h1>
+    <p style="text-align:center;">This is a directory of all the diseases that RiskHealthBoard can generate assessments for, this index provides in depth.
+    details about the disease including its symptoms.</p>
+    <h2>1. Breast Cancer </h2>
+    <div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="static/img/breastcancer.png" /><br/><br/>
+   </div>
+    <p>Breast cancer is cancer that develops from breast tissue. Signs of breast cancer may include a lump in the breast, a change in breast shape, dimpling of the skin, fluid coming from the nipple, a newly inverted nipple, or a red or scaly patch of skin.<br></p>
+
+    <h3>Symptoms</h3>
+    <p>Signs and symptoms of breast cancer may include:</p>
+    <ul>
+      <li>A breast lump or thickening that feels different from the surrounding tissue</li>
+      <li>Change in the size, shape or appearance of a breast
+      </li>
+      <li>
+        Changes to the skin over the breast, such as dimpling
+      </li>
+      <li>
+        A newly inverted nipple
+      </li>
+      <li>Peeling, scaling, crusting or flaking of the pigmented area of skin surrounding the nipple (areola) or breast skin</li>
+      <li>Redness or pitting of the skin over your breast, like the skin of an orange</li>
+    </ul>
+    <h3>Causes</h3>
+    <p>Doctors know that breast cancer occurs when some breast cells begin to grow abnormally. These cells divide more rapidly than healthy cells do and continue to accumulate, forming a lump or mass. Cells may spread (metastasize) through your breast to your lymph nodes or to other parts of your body.<br>
+Breast cancer most often begins with cells in the milk-producing ducts (invasive ductal carcinoma). Breast cancer may also begin in the glandular tissue called lobules (invasive lobular carcinoma) or in other cells or tissue within the breast.
+<br>
+Researchers have identified hormonal, lifestyle and environmental factors that may increase your risk of breast cancer. But it's not clear why some people who have no risk factors develop cancer, yet other people with risk factors never do. It's likely that breast cancer is caused by a complex interaction of your genetic makeup and your environment.</p>
+<br>
+<hr>
+<br>
+
+<h2>2. Diabetes</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="static/img/diabetes.png" /><br/><br/>
+   </div>
+<p>Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy.</p>
+<h3>What health problems can people with diabetes develop? </h3>
+<p>Over time, high blood glucose leads to problems such as</p>
+
+ <ul>
+  <li>heart disease</li>
+  <li>stroke</li>
+  <li>kidney disease</li>
+  <li>eye problems</li>
+  <li>dental disease</li>
+  <li>nerve damage</li>
+  <li>foot problems</li>
+</ul>
+<br>
+<hr>
+<br>
+
+<h2>3.Kidney Disease</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="static/img/kidney.png" /><br/>
+   </div>
+<h3>Overview</h3>
+<p>The kidneys play key roles in body function, not only by filtering the blood and getting rid of waste products, but also by balancing the electrolyte levels in the body, controlling blood pressure, and stimulating the production of red blood cells.<br>
+
+The kidneys are located in the abdomen toward the back, normally one on each side of the spine. They get their blood supply through the renal arteries directly from the aorta and send blood back to the heart via the renal veins to the vena cava. (The term "renal" is derived from the Latin name for kidney.)<br>
+</p>
+<ul>
+    <li>Lethargy</li>
+   <li> Weakness</li>
+    <li>Shortness of breath</li>
+    <li>Generalized swelling (edema)</li>
+    <li>Generalized weakness due to anemia</li>
+    <li>Loss of appetite</li>
+    <li>Lethargy</li>
+    <li>Fatigue</li>
+    <li>Congestive heart failure</li>
+    <li>Metabolic acidosis</li>
+    <li>High blood potassium (hyperkalemia)</li>
+    <li>Fatal heart rhythm disturbances (arrhythmias) including ventricular tachycardia and ventricular fibrillation</li>
+    <li>
+    Rising urea levels in the blood (uremia) may lead to brain encephalopathy, pericarditis (inflammation of the heart lining), or low calcium blood levels (hypocalcemia)</li>
+  </ul>
+
+<br>
+<hr>
+<br>
+<h2>4.Liver Disease</h2>
+<div style="text-align: center; margin-top: 20px">
+       <img style="max-width: 600px" src="static/img/liver.png" /><br/>
+   </div>
+<p>Liver disease is any disturbance of liver function that causes illness. The liver is responsible for many critical functions within the body and should it become diseased or injured, the loss of those functions can cause significant damage to the body. Liver disease is also referred to as hepatic disease.<br>
+
+Liver disease is a broad term that covers all the potential problems that cause the liver to fail to perform its designated functions. Usually, more than 75% or three quarters of liver tissue needs to be affected before a decrease in function occurs.<br></p>
+
+<h3>Symptoms</h3>
+<p>Classic symptoms of liver disease include:</p>
+ <ul>
+  <li>nausea</li>
+  <li>vomiting</li>
+  <li>right upper quadrant abdominal pain, and </li>
+  <li>jaundice (a yellow discoloration of the skin due to elevated bilirubin concentrations in the bloodstream).</li>
+</ul>
+  <br>
+  <hr>
+
+	</div>
+
+    <footer>
+        <footer class="site-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <h6 style="font-family:'Times New Roman', Times, serif;color: aliceblue;">CONTACT US</h6>
+                <p>Students of REVA University,<br>Bangalore Karnataka
+                  </p>
+                </div>
+      
+                <div class="col-6 col-md-4">
+                  <h6 style="font-family:'Times New Roman', Times, serif;color: aliceblue;">Address</h6>
+                  <p class="fas fa-home me-3"></p>Bangalore, Karnataka<br>
+                  <p class="fas fa-phone me-3"></p>+91 9845632195<br>
+                  <p class="fas fa-envelope me-3"></p>riskhealthboard@gmail.com
+                  
+                  </div>
+      
+                
+              <div class="col-6 col-md-3">
+                <h6 style="font-family:'Times New Roman', Times, serif">Quick Links</h6>
+                <ul class="footer-links">
+                  <li><a href="/" style="font-size: 18px;">Home</a></li>
+                <li><a href="/about" style="font-size: 18px;">About Us</a></li>
+                <li><a href="/dashboard" style="font-size: 18px;">DashBoard</a></li>
+                <li><a href="/disindex" style="font-size: 18px;">Disease Information</a></li>
+                <li><a href="/help" style="font-size: 18px;">Help</a></li>
+                <li><a href="/tc" style="font-size: 18px;">Terms and Conditions</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <hr class="small">
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-6 col-12">
+                <p class="copyright-text">Copyright © 2023 All Rights Reserved by
+                  Students of REVA University
+                </p>
+              </div>
+      
+              <div class="col-md-4 col-sm-6 col-12">
+                <ul class="social-icons">
+                  <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+         
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

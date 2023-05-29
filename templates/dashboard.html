@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Get Started</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" type="text/css" href="C:\Desktop1\Shwetha V\RiskHealthBoard_Project\static\style.css">
+  
+
+    <style>
+    nav {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(60, 63, 63);
+}
+
+.navbar-brand {
+    font-size: 22px;
+    color:aliceblue; 
+}
+.nav-link{
+    font-size: 18px;
+    color: aliceblue;
+}
+    
+
+    </style>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home"><b>RISK HEALTH BOARD</b><br><div style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:small  ;"><i>Be At a Ease Without a Disease</i></div></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div style="text-align: right;">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" href="/dashboard">Get Started</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/disindex">Disease Index</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/cancer">Breast Cancer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/diabetes">Diabetes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/kidney">Kidney Disease</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/liver">Liver Disease</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">|</a>
+            </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/">Logout</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </nav>
+</header>
+
+    
+        
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">Hello! Lets Get Started with RiskHealthBoard</h1>
+      <p>Welcome to RiskHealthBoard!, a risk assessment system for medical institutions to generate risk assessments for their patients. RiskHealthBoard started off as a company that formed strong relationships with medical institutions to help them generate their assessments with ease and maximum efficiency thus saving the organization's valuable time.
+          Click below to learn about the diseases that RiskHealthBoard is capable of assessing.</p>
+      <p><a class="btn btn-primary btn-lg" href="/disindex" role="button">Get Started &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+        <h2>1. Cancer Prediction</h2>
+        <p>Navigate to the "Cancer" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
+
+      </div>
+      <div class="col-md-4">
+        <h2>2. Diabetes Prediction</h2>
+        <p>Navigate to the "Diabetes" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
+
+      </div>
+        <div class="col-md-4">
+        <h2>3. Kidney Disease</h2>
+        <p>Navigate to the "Kidney Disease" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
+
+      </div>
+
+      </div>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <h2>4. Liver Disease </h2>
+        <p>Navigate to the "Liver Disease" section and add the corresponding details and click on predict to learn whether the patient is at the risk of this illness/disease.</p>
+
+      </div>
+      <div class="col-md-4">
+        <h2>5. Disease Index</h2>
+        <p>Navigate to the "Disease Index" section and gain in-depth information about each of these diseases.</p>
+
+      </div>
+    </div>
+    </div>
+    <hr>
+  </div>
+
+
+  <footer>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <h6 style="font-family:'Times New Roman', Times, serif;color: aliceblue;">CONTACT US</h6>
+            <p>Students of REVA University,<br>Bangalore Karnataka
+              </p>
+            </div>
+  
+            <div class="col-6 col-md-4">
+              <h6 style="font-family:'Times New Roman', Times, serif;color: aliceblue;">Address</h6>
+              <p class="fas fa-home me-3"></p>Bangalore, Karnataka<br>
+              <p class="fas fa-phone me-3"></p>+91 9845632195<br>
+              <p class="fas fa-envelope me-3"></p>riskhealthboard@gmail.com
+              
+              </div>
+  
+            
+          <div class="col-6 col-md-3">
+            <h6 style="font-family:'Times New Roman', Times, serif">Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="/" style="font-size: 18px;">Home</a></li>
+            <li><a href="/about" style="font-size: 18px;">About Us</a></li>
+            <li><a href="/dashboard" style="font-size: 18px;">DashBoard</a></li>
+            <li><a href="/disindex" style="font-size: 18px;">Disease Information</a></li>
+            <li><a href="/help" style="font-size: 18px;">Help</a></li>
+            <li><a href="/tc" style="font-size: 18px;">Terms and Conditions</a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <hr class="small">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-12">
+            <p class="copyright-text">Copyright © 2023 All Rights Reserved by
+              Students of REVA University
+            </p>
+          </div>
+  
+          <div class="col-md-4 col-sm-6 col-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+     
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+
+   
+</body>
+</html>
+
+
